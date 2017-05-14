@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+   div.circled {
+    background: #afa5a5;
+   /* color: #fff; \*_*/ */
+    padding: 10px; 
+    border-radius: 5px; 
+   }
+    div.circled#ref {
+    background: #68d887;
+    color: #fff; 
+    padding: 10px; 
+    border-radius: 10px; 
+    text-align: center;
+   }
+   .hidden{
+   opacity: 1.0;
+   }
+   .i7i5i{
+   width: 75px;
+	 height: 75px;
+   }
+  </style>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$( function() {
+		$( "img#drag" ).draggable();
+	} );
+	</script>
+	<script>
+	function refresh(){
+	var inner=document.getElementsByClassName('circled')[0];  
+	  var elem=$("<img id='drag' class='i7i5i' src='img/i see.png'>")[0];
+	var child=inner.children[1];
+		var childs=inner.children[inner.childElementCount - 1];
+	  inner.insertBefore(elem,childs);
+	var elem2=$("<img id='drag' class='i7i5i' src='img/trolllol.png'>")[0];
+  var elem3=$("<img id='drag' class='i7i5i' src='img/troll.png'>")[0];
+  var elem4=$("<img id='drag' class='i7i5i' src='img/mad.png'>")[0];
+  var elem5=$("<img id='drag' class='i7i5i' src='img/lol-guy.png'>")[0];
+  var elem6=$("<img id='drag' class='i7i5i' src='img/awesome.png'>")[0];
+     inner.insertBefore(elem2,childs);
+     inner.insertBefore(elem3,childs);
+     inner.insertBefore(elem4,childs);
+     inner.insertBefore(elem5,childs);
+     inner.insertBefore(elem6,childs);
+	$( function() {
+		$( "img#drag" ).draggable();
+	})};
+	</script>
+ </head>
+ <body>
+	 <div class='circled'>
+		 <img id='drag' class='i7i5i' src='img/i see.png'>
+		 <img id='drag' class='i7i5i' src='img/trolllol.png'>
+		 <img id='drag' class='i7i5i' src='img/troll.png'>
+		 <img id='drag' class='i7i5i' src='img/mad.png'>
+		 <img id='drag' class='i7i5i' src='img/lol-guy.png'>
+		 <img id='drag' class='i7i5i' src='img/awesome.png'>
+	     <div class='circled' id='ref' onclick='refresh()'>Refresh
+		   </div>
+	 </div>
+ </body>
+</html>
